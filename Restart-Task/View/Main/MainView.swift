@@ -18,6 +18,7 @@ class MainView: UIView {
     public func setup(){
         setupTableView()
         setupAddButton()
+        totalCostLabel.text = "..."
         self.backgroundColor = Colors.mainBackColor
         prodctTableView.backgroundColor = Colors.mainBackColor
     }
