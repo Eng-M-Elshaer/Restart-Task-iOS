@@ -55,6 +55,7 @@ extension MainViewModel: MainViewModelProtocol {
         products.removeAll()
         savedProductsManager.clearCoreData()
         self.view?.setTotalCost(cost: "0")
+        self.view?.handleNoData(flag: true)
         self.view?.reloadTable()
     }
     internal func getProductsCount() -> Int{
@@ -72,12 +73,15 @@ extension MainViewModel: MainViewModelProtocol {
         if savedProductsManager.getProductsCount() > 0 {
             self.savedProducts = savedProductsManager.getSavedProducts()
             self.view?.setTotalCost(cost: getTotalCost())
+            self.view?.handleNoData(flag: false)
             self.view?.reloadTable()
         } else {
+            self.view?.handleNoData(flag: false)
             callProductsAPI()
         }
     }
     internal func getAPIData(){
+        self.view?.handleNoData(flag: false)
         callProductsAPI()
     }
 }

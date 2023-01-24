@@ -14,6 +14,7 @@ protocol MainVCProtocol: AnyObject {
     func showAlert(with error: String)
     func setTotalCost(cost: String)
     func showFetchAlert()
+    func handleNoData(flag: Bool)
 }
 
 class MainVC: UIViewController {
@@ -50,6 +51,9 @@ class MainVC: UIViewController {
 
 //MARK: - MainVC Protocol.
 extension MainVC: MainVCProtocol {
+    func handleNoData(flag: Bool) {
+        self.mainView?.handleNoData(flag: flag)
+    }
     func showFetchAlert() {
         self.showFetchAlert(title: AlertTitle.alert, message: AlertMessage.yourListOnready) { _ in
             self.viewModel.getAPIData()
