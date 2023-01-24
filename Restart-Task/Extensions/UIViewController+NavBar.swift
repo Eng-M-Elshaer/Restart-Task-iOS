@@ -19,6 +19,7 @@ extension UIViewController {
         titleLabel.text = title
         titleLabel.textColor = fontColor
         self.navigationItem.titleView = titleLabel
+        navigationController?.navigationBar.barTintColor = Colors.mainBackColor
     }
     func setupLeftButton(title: String, color: UIColor, action: Selector) {
         let leftBarButtonItem = UIBarButtonItem.init(title: title, style: .done, target: self, action: action)
