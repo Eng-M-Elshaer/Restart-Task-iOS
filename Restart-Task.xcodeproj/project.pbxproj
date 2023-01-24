@@ -13,6 +13,7 @@
 		E2495B7E2980004500CB68AB /* CoreDataRepoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2495B7D2980004500CB68AB /* CoreDataRepoManager.swift */; };
 		E2495B812980006E00CB68AB /* SaveProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2495B7F2980006E00CB68AB /* SaveProductModel.swift */; };
 		E2495B822980006E00CB68AB /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2495B802980006E00CB68AB /* Product.swift */; };
+		E2495B842980008B00CB68AB /* SavedProductsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2495B832980008B00CB68AB /* SavedProductsManager.swift */; };
 		E25BBD55297FF35E00B80D22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25BBD54297FF35E00B80D22 /* AppDelegate.swift */; };
 		E25BBD5C297FF35E00B80D22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E25BBD5A297FF35E00B80D22 /* Main.storyboard */; };
 		E25BBD5F297FF35E00B80D22 /* Restart_Task.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E25BBD5D297FF35E00B80D22 /* Restart_Task.xcdatamodeld */; };
@@ -29,6 +30,7 @@
 		E2495B7D2980004500CB68AB /* CoreDataRepoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataRepoManager.swift; sourceTree = "<group>"; };
 		E2495B7F2980006E00CB68AB /* SaveProductModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveProductModel.swift; sourceTree = "<group>"; };
 		E2495B802980006E00CB68AB /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		E2495B832980008B00CB68AB /* SavedProductsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedProductsManager.swift; sourceTree = "<group>"; };
 		E25BBD51297FF35E00B80D22 /* Restart-Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Restart-Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E25BBD54297FF35E00B80D22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E25BBD5B297FF35E00B80D22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				E2495B7D2980004500CB68AB /* CoreDataRepoManager.swift */,
+				E2495B832980008B00CB68AB /* SavedProductsManager.swift */,
 			);
 			path = Mangers;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				E2495B812980006E00CB68AB /* SaveProductModel.swift in Sources */,
 				E25BBD55297FF35E00B80D22 /* AppDelegate.swift in Sources */,
 				E2495B822980006E00CB68AB /* Product.swift in Sources */,
+				E2495B842980008B00CB68AB /* SavedProductsManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
