@@ -82,6 +82,89 @@
             </objects>
             <point key="canvasLocation" x="1973.8461538461538" y="2.8436018957345972"/>
         </scene>
+        <!--Add ProductVC-->
+        <scene sceneID="sN2-iZ-ib1">
+            <objects>
+                <viewController storyboardIdentifier="AddProductVC" id="hKt-ls-aRd" customClass="AddProductVC" customModule="RestartTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dPF-gf-Ha3" customClass="AddProductView" customModule="RestartTask" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="7aB-jk-P3D">
+                                <rect key="frame" x="24" y="71.000000000000028" width="342" height="414.66666666666674"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qld-DW-zhq">
+                                        <rect key="frame" x="0.0" y="0.0" width="342" height="34.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EmY-Wq-vDn">
+                                        <rect key="frame" x="0.0" y="54.333333333333329" width="342" height="34.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aEU-l0-Bgy">
+                                        <rect key="frame" x="0.0" y="108.66666666666666" width="342" height="34.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SKq-LD-JRu">
+                                        <rect key="frame" x="0.0" y="163" width="342" height="34.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v8l-Hm-Ddq">
+                                        <rect key="frame" x="0.0" y="217.33333333333331" width="342" height="34.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iut-fB-evi">
+                                        <rect key="frame" x="0.0" y="271.66666666666669" width="342" height="34.333333333333314"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cgn-Uc-agb">
+                                        <rect key="frame" x="0.0" y="326" width="342" height="34.333333333333314"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQr-Bu-nO3">
+                                        <rect key="frame" x="0.0" y="380.33333333333331" width="342" height="34.333333333333314"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                        <connections>
+                                            <action selector="addBtnTapped:" destination="hKt-ls-aRd" eventType="touchUpInside" id="udl-PG-tL2"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Io6-tT-mam"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7aB-jk-P3D" firstAttribute="leading" secondItem="Io6-tT-mam" secondAttribute="leading" constant="24" id="1td-pg-n3J"/>
+                            <constraint firstItem="Io6-tT-mam" firstAttribute="trailing" secondItem="7aB-jk-P3D" secondAttribute="trailing" constant="24" id="hiM-fp-hKH"/>
+                            <constraint firstItem="7aB-jk-P3D" firstAttribute="top" secondItem="Io6-tT-mam" secondAttribute="top" constant="24" id="nSK-rZ-pkx"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="addButton" destination="NQr-Bu-nO3" id="mgy-t8-MM0"/>
+                            <outlet property="barcodeTextField" destination="SKq-LD-JRu" id="6xP-ch-U8X"/>
+                            <outlet property="costPriceTextField" destination="Iut-fB-evi" id="c3j-gD-dgq"/>
+                            <outlet property="descTextField" destination="v8l-Hm-Ddq" id="2gp-gV-WsY"/>
+                            <outlet property="idTextField" destination="qld-DW-zhq" id="PeQ-wS-pRA"/>
+                            <outlet property="imageUrlImageView" destination="aEU-l0-Bgy" id="qEj-L4-ZW3"/>
+                            <outlet property="nameTextField" destination="EmY-Wq-vDn" id="pai-LS-rsb"/>
+                            <outlet property="retailPriceTextField" destination="Cgn-Uc-agb" id="9QZ-V1-BlI"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="addProductView" destination="dPF-gf-Ha3" id="fO2-tD-5iR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lyp-Rt-A9h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2911.594202898551" y="697.76785714285711"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
