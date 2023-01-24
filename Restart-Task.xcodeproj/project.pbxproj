@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		68144F2B1A7A9E0617E5D41F /* Pods_Restart_Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75E7FA1F314C25DADD750877 /* Pods_Restart_Task.framework */; };
 		E25BBD55297FF35E00B80D22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25BBD54297FF35E00B80D22 /* AppDelegate.swift */; };
 		E25BBD5C297FF35E00B80D22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E25BBD5A297FF35E00B80D22 /* Main.storyboard */; };
 		E25BBD5F297FF35E00B80D22 /* Restart_Task.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E25BBD5D297FF35E00B80D22 /* Restart_Task.xcdatamodeld */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		75E7FA1F314C25DADD750877 /* Pods_Restart_Task.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Restart_Task.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		87FB16F9ED493F4FCECD98F0 /* Pods-Restart-Task.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Restart-Task.debug.xcconfig"; path = "Target Support Files/Pods-Restart-Task/Pods-Restart-Task.debug.xcconfig"; sourceTree = "<group>"; };
+		B7FC78B08C2BCC7098D20E2B /* Pods-Restart-Task.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Restart-Task.release.xcconfig"; path = "Target Support Files/Pods-Restart-Task/Pods-Restart-Task.release.xcconfig"; sourceTree = "<group>"; };
 		E25BBD51297FF35E00B80D22 /* Restart-Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Restart-Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E25BBD54297FF35E00B80D22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E25BBD5B297FF35E00B80D22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -29,12 +33,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68144F2B1A7A9E0617E5D41F /* Pods_Restart_Task.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A0DC378E6D4D7C745FAE8FB5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				87FB16F9ED493F4FCECD98F0 /* Pods-Restart-Task.debug.xcconfig */,
+				B7FC78B08C2BCC7098D20E2B /* Pods-Restart-Task.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E2495B73297FFED900CB68AB /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -47,6 +62,8 @@
 			children = (
 				E25BBD53297FF35E00B80D22 /* Restart-Task */,
 				E25BBD52297FF35E00B80D22 /* Products */,
+				A0DC378E6D4D7C745FAE8FB5 /* Pods */,
+				EDA7F273773D0C352E208FD6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,6 +161,14 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		EDA7F273773D0C352E208FD6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				75E7FA1F314C25DADD750877 /* Pods_Restart_Task.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -151,9 +176,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E25BBD68297FF36500B80D22 /* Build configuration list for PBXNativeTarget "Restart-Task" */;
 			buildPhases = (
+				F9DF5DDE6C604CC31A08463E /* [CP] Check Pods Manifest.lock */,
 				E25BBD4D297FF35E00B80D22 /* Sources */,
 				E25BBD4E297FF35E00B80D22 /* Frameworks */,
 				E25BBD4F297FF35E00B80D22 /* Resources */,
+				3158F38BA42C3C4371CAD320 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -209,6 +236,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3158F38BA42C3C4371CAD320 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Restart-Task/Pods-Restart-Task-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Restart-Task/Pods-Restart-Task-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Restart-Task/Pods-Restart-Task-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9DF5DDE6C604CC31A08463E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Restart-Task-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E25BBD4D297FF35E00B80D22 /* Sources */ = {
@@ -358,6 +427,7 @@
 		};
 		E25BBD69297FF36500B80D22 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87FB16F9ED493F4FCECD98F0 /* Pods-Restart-Task.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -391,6 +461,7 @@
 		};
 		E25BBD6A297FF36500B80D22 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7FC78B08C2BCC7098D20E2B /* Pods-Restart-Task.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

@@ -6,5 +6,8 @@ target 'Restart-Task' do
   use_frameworks!
 
   # Pods for Restart-Task
+    pod 'Alamofire'
+    pod 'SDWebImage'
+    pod 'IQKeyboardManagerSwift'
 
 end
