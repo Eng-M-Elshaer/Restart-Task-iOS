@@ -39,6 +39,7 @@ struct Images {
 struct AlertTitle {
     static let sorry = "Sorry"
     static let success = "Success"
+    static let alert = "Alert"
 }
 
 // MARK: - AlertMessage.
@@ -52,6 +53,7 @@ struct AlertMessage {
     static let enterBarcore = "Please Enter Barcode"
     static let cost = "Please Enter Price Cost"
     static let retail = "Please Enter Price Retail"
+    static let yourListOnready = "Your list onready has an item are you sure you want to fetch again."
 }
 
 // MARK: - ViewControllerTitle.
