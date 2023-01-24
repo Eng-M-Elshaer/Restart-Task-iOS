@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		E25BBD55297FF35E00B80D22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25BBD54297FF35E00B80D22 /* AppDelegate.swift */; };
-		E25BBD59297FF35E00B80D22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25BBD58297FF35E00B80D22 /* ViewController.swift */; };
 		E25BBD5C297FF35E00B80D22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E25BBD5A297FF35E00B80D22 /* Main.storyboard */; };
 		E25BBD5F297FF35E00B80D22 /* Restart_Task.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E25BBD5D297FF35E00B80D22 /* Restart_Task.xcdatamodeld */; };
 		E25BBD61297FF36400B80D22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E25BBD60297FF36400B80D22 /* Assets.xcassets */; };
@@ -18,7 +17,6 @@
 /* Begin PBXFileReference section */
 		E25BBD51297FF35E00B80D22 /* Restart-Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Restart-Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E25BBD54297FF35E00B80D22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E25BBD58297FF35E00B80D22 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E25BBD5B297FF35E00B80D22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E25BBD5E297FF35E00B80D22 /* Restart_Task.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Restart_Task.xcdatamodel; sourceTree = "<group>"; };
 		E25BBD60297FF36400B80D22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -37,6 +35,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E2495B73297FFED900CB68AB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		E25BBD48297FF35E00B80D22 = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +61,87 @@
 		E25BBD53297FF35E00B80D22 /* Restart-Task */ = {
 			isa = PBXGroup;
 			children = (
-				E25BBD54297FF35E00B80D22 /* AppDelegate.swift */,
-				E25BBD58297FF35E00B80D22 /* ViewController.swift */,
-				E25BBD5A297FF35E00B80D22 /* Main.storyboard */,
-				E25BBD60297FF36400B80D22 /* Assets.xcassets */,
-				E25BBD62297FF36400B80D22 /* LaunchScreen.storyboard */,
 				E25BBD65297FF36400B80D22 /* Info.plist */,
+				E25BBD6D297FF49600B80D22 /* Shared */,
+				E25BBD6E297FF4C900B80D22 /* Networking */,
+				E25BBD6F297FF4D900B80D22 /* Mangers */,
+				E25BBD70297FF4E600B80D22 /* Models */,
+				E25BBD71297FF4F100B80D22 /* View */,
+				E25BBD72297FF4FD00B80D22 /* ViewModel */,
+				E25BBD73297FF50800B80D22 /* Utilities */,
+				E2495B73297FFED900CB68AB /* Extensions */,
+				E25BBD6C297FF48C00B80D22 /* Resourse */,
 				E25BBD5D297FF35E00B80D22 /* Restart_Task.xcdatamodeld */,
 			);
 			path = "Restart-Task";
+			sourceTree = "<group>";
+		};
+		E25BBD6B297FF47F00B80D22 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				E25BBD5A297FF35E00B80D22 /* Main.storyboard */,
+				E25BBD62297FF36400B80D22 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		E25BBD6C297FF48C00B80D22 /* Resourse */ = {
+			isa = PBXGroup;
+			children = (
+				E25BBD60297FF36400B80D22 /* Assets.xcassets */,
+				E25BBD6B297FF47F00B80D22 /* Storyboard */,
+			);
+			path = Resourse;
+			sourceTree = "<group>";
+		};
+		E25BBD6D297FF49600B80D22 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				E25BBD54297FF35E00B80D22 /* AppDelegate.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		E25BBD6E297FF4C900B80D22 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		E25BBD6F297FF4D900B80D22 /* Mangers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mangers;
+			sourceTree = "<group>";
+		};
+		E25BBD70297FF4E600B80D22 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E25BBD71297FF4F100B80D22 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E25BBD72297FF4FD00B80D22 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E25BBD73297FF50800B80D22 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +216,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E25BBD5F297FF35E00B80D22 /* Restart_Task.xcdatamodeld in Sources */,
-				E25BBD59297FF35E00B80D22 /* ViewController.swift in Sources */,
 				E25BBD55297FF35E00B80D22 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
