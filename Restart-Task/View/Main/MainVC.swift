@@ -13,6 +13,7 @@ protocol MainVCProtocol: AnyObject {
     func reloadTable()
     func showAlert(with error: String)
     func setTotalCost(cost: String)
+    func showFetchAlert()
 }
 
 class MainVC: UIViewController {
@@ -30,7 +31,7 @@ class MainVC: UIViewController {
         setupTableView()
     }
     override func viewWillAppear(_ animated: Bool) {
-        viewModel.getLoclData()
+        viewModel.getListData()
     }
     
     //MARK: - Class Methods.
@@ -49,6 +50,11 @@ class MainVC: UIViewController {
 
 //MARK: - MainVC Protocol.
 extension MainVC: MainVCProtocol {
+    func showFetchAlert() {
+        self.showFetchAlert(title: AlertTitle.alert, message: AlertMessage.yourListOnready) { _ in
+            self.viewModel.getAPIData()
+        }
+    }
     func setTotalCost(cost: String) {
         self.mainView?.setupTotalPriceLabel(totalPrice: cost)
     }
@@ -83,7 +89,7 @@ extension MainVC {
         viewModel.clearTheData()
     }
     @objc private func fetch() {
-        viewModel.getLoclData()
+        viewModel.checkPorducts()
     }
 }
 

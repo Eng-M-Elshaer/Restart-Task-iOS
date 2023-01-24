@@ -12,8 +12,10 @@ protocol MainViewModelProtocol {
     func clearTheData()
     func getProductsCount() -> Int
     func deleteItem(product: SaveProductModel)
-    func getLoclData()
+    func getListData()
     func getProducts(at index: Int) -> SaveProductModel
+    func getAPIData()
+    func checkPorducts()
 }
 
 class MainViewModel {
@@ -32,6 +34,13 @@ class MainViewModel {
 
 // MARK: - MainViewModelProtocol
 extension MainViewModel: MainViewModelProtocol {
+    internal func checkPorducts(){
+        if self.getProductsCount() > 0 {
+            self.view?.showFetchAlert()
+        } else {
+            getListData()
+        }
+    }
     internal func getProducts(at index: Int) -> SaveProductModel {
         if index >= 0 && index < self.getProductsCount(){
             return savedProducts[index]
@@ -42,8 +51,9 @@ extension MainViewModel: MainViewModelProtocol {
         return "\(getTotalCost())"
     }
     internal func clearTheData(){
-        savedProductsManager.clearCoreData()
         savedProducts.removeAll()
+        products.removeAll()
+        savedProductsManager.clearCoreData()
         self.view?.setTotalCost(cost: "0")
         self.view?.reloadTable()
     }
@@ -58,7 +68,7 @@ extension MainViewModel: MainViewModelProtocol {
         }
         self.getDataFromCoreData()
     }
-    internal func getLoclData(){
+    internal func getListData(){
         if savedProductsManager.getProductsCount() > 0 {
             self.savedProducts = savedProductsManager.getSavedProducts()
             self.view?.setTotalCost(cost: getTotalCost())
@@ -67,12 +77,16 @@ extension MainViewModel: MainViewModelProtocol {
             callProductsAPI()
         }
     }
+    internal func getAPIData(){
+        callProductsAPI()
+    }
 }
 
 // MARK: - APIs Calls
 extension MainViewModel {
     private func callProductsAPI(){
         self.view?.showLoader()
+        self.products.removeAll()
         APIManager.getProducts { response, code in
             switch response {
             case .success(let result):
@@ -98,7 +112,7 @@ extension MainViewModel {
     private func handleProducts(_ products: [ProductValue]?){
         if let products = products {
             for item in products {
-                savedProductsManager.addNewProduct(item)
+                savedProductsManager.checkQuantity(item)
             }
             self.savedProducts = savedProductsManager.getSavedProducts()
             self.view?.setTotalCost(cost: getTotalCost())
