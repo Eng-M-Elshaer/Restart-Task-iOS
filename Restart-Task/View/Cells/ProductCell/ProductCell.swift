@@ -31,6 +31,6 @@ class ProductCell: UITableViewCell {
         productNameLabel.text = porduct.name
         productCostLabel.text = "\(porduct.retailPrice) EGP"
         productQuantityLabel.text = "No. \(porduct.quantity)"
-        productDescpLabel.text = porduct.theDesc.description
+        productDescpLabel.text = porduct.theDesc
     }
 }

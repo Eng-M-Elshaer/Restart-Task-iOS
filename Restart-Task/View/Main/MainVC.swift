@@ -27,10 +27,9 @@ class MainVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        mainView.setup()
         setupTableView()
     }
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         viewModel.getLoclData()
     }
     
@@ -78,6 +77,7 @@ extension MainVC {
         self.setViewControllerTitle(to: ViewControllerTitle.main, fontColor: .black)
         self.setupRightButton(title: "Clear", color: .black, action: #selector(clearBtnTapped))
         self.setupLeftButton(title: "Fetch", color: .black, action: #selector(fetch))
+        mainView.setup()
     }
     @objc private func clearBtnTapped() {
         viewModel.clearTheData()
@@ -90,18 +90,16 @@ extension MainVC {
 //MARK: - TableView DataSource.
 extension MainVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.getProducts().count
+        return viewModel.getProductsCount()
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CustomCell.productCell, for: indexPath) as? ProductCell else {return UITableViewCell()}
-        let products: [SaveProductModel] = viewModel.getProducts()
-        cell.configCell(with: products[indexPath.row])
+        cell.configCell(with: viewModel.getProducts(at: indexPath.row))
         return cell
     }
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            let products: [SaveProductModel] = viewModel.getProducts()
-            viewModel.deleteItem(product: products[indexPath.row])
+            viewModel.deleteItem(product: viewModel.getProducts(at: indexPath.row))
         }
     }
 }
@@ -109,8 +107,7 @@ extension MainVC: UITableViewDataSource {
 //MARK: - TableView Delegate.
 extension MainVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let products: [SaveProductModel] = viewModel.getProducts()
-        let vc = ProductDetailesVC.create(with: products[indexPath.row])
+        let vc = ProductDetailesVC.create(with: viewModel.getProducts(at: indexPath.row))
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

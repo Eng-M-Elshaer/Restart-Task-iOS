@@ -37,7 +37,6 @@ extension AddProductViewModel: AddProductViewModelProtocol {
                                        retailPrice: Int(product.retail ?? "")!,
                                        costPrice: Int(product.cost ?? ""))
             saveProduct(product: product)
-            self.view?.backToMain()
         }
     }
     
@@ -70,7 +69,7 @@ extension AddProductViewModel: AddProductViewModelProtocol {
     }
     private func saveProduct(product: ProductValue) {
         savedProductsManager.checkQuantity(product)
-        self.view?.showAlertWith(title: AlertTitle.success, message: AlertMessage.yourItemAdded)
+        self.view?.showSucess()
     }
 }
 

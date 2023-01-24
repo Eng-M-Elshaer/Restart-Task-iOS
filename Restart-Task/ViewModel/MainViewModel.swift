@@ -14,6 +14,7 @@ protocol MainViewModelProtocol {
     func getProductsCount() -> Int
     func deleteItem(product: SaveProductModel)
     func getLoclData()
+    func getProducts(at index: Int) -> SaveProductModel
 }
 
 class MainViewModel {
@@ -32,6 +33,12 @@ class MainViewModel {
 
 // MARK: - MainViewModelProtocol
 extension MainViewModel: MainViewModelProtocol {
+    internal func getProducts(at index: Int) -> SaveProductModel {
+        if index >= 0 && index < self.getProductsCount(){
+            return savedProducts[index]
+        }
+        return SaveProductModel()
+    }
     internal func getProducts() -> [SaveProductModel] {
         return self.savedProducts
     }

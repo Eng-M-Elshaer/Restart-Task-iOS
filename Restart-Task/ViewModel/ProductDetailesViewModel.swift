@@ -7,7 +7,6 @@
 
 protocol ProductDetailesViewModelProtocol {
     func getProduct() -> SaveProductModel
-    func saveProduct()
 }
 
 class ProductDetailesViewModel {
@@ -26,17 +25,6 @@ class ProductDetailesViewModel {
 
 // MARK: - ProductDetailesViewModelProtocol
 extension ProductDetailesViewModel: ProductDetailesViewModelProtocol {
-    internal func saveProduct() {
-        let product = ProductValue(barcode: product.barcode,
-                                   description: product.theDesc,
-                                   id: product.id,
-                                   imageURL: product.imageURL,
-                                   name: product.name,
-                                   retailPrice: product.retailPrice,
-                                   costPrice: product.costPrice)
-        savedProductsManager.checkQuantity(product)
-        self.view?.showAlert()
-    }
     internal func getProduct() -> SaveProductModel {
         return self.product
     }

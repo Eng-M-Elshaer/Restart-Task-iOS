@@ -25,7 +25,7 @@ class ProductDetailesView: UIView {
         setImage(with: product.imageURL)
         setProductInfo(for: productNameLabel, text: product.name)
         setProductInfo(for: productPriceLabel, text: "\(product.retailPrice) EGP")
-        productDespLabel.text = product.theDesc.description
+        productDespLabel.text = product.theDesc
     }
 }
 

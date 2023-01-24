@@ -17,7 +17,7 @@ class APIManager{
 }
 
 extension APIManager {
-    // MARK:- The request function to get results in a closure
+    // MARK: - The request function to get results in a closure.
     internal static func request<T: Decodable>(_ urlConvertible: URLRequestConvertible, completion:  @escaping (Result<T, Error>, _ code: Int?) -> ()) {
         // Trigger the HttpRequest using AlamoFire
         AF.request(urlConvertible).responseDecodable { (response: AFDataResponse<T>) in

@@ -9,7 +9,7 @@ import UIKit
 
 protocol AddProductVCProtocol: AnyObject {
     func showAlertWith(title: String, message: String)
-    func backToMain()
+    func showSucess()
 }
 
 class AddProductVC: UIViewController {
@@ -23,7 +23,6 @@ class AddProductVC: UIViewController {
     //MARK: - LifeCycle Methods.
     override func viewDidLoad() {
         super.viewDidLoad()
-        addProductView.setup()
         setupUI()
     }
     
@@ -48,11 +47,13 @@ class AddProductVC: UIViewController {
 
 //MARK: - AddProductVCProtocol.
 extension AddProductVC: AddProductVCProtocol {
+    func showSucess() {
+        self.showSuccessAlert(title: AlertTitle.success, message: AlertMessage.yourItemAdded) { _ in
+            self.backToMain()
+        }
+    }
     func showAlertWith(title: String, message: String) {
         self.showAlert(title: title, message: message)
-    }
-    func backToMain() {
-        self.navigationController?.popViewController(animated: true)
     }
 }
 
@@ -60,5 +61,9 @@ extension AddProductVC: AddProductVCProtocol {
 extension AddProductVC {
     private func setupUI(){
         self.setViewControllerTitle(to: ViewControllerTitle.main, fontColor: .black)
+        addProductView.setup()
+    }
+    private func backToMain() {
+        self.navigationController?.popViewController(animated: true)
     }
 }

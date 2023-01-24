@@ -11,15 +11,17 @@ import CoreData
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    // MARK: - Properties
     var window: UIWindow?
 
+    // MARK: - Application Methods.
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         IQKeyboardManager.shared.enable = true
         handleRoot()
         return true
     }
     
-    // MARK: - Core Data stack
+    //MARK: - Core Data stack.
     lazy var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "Restart_Task")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
@@ -30,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return container
     }()
 
-    // MARK: - Core Data Saving support
+    //MARK: - Core Data Saving support.
     func saveContext () {
         let context = persistentContainer.viewContext
         if context.hasChanges {

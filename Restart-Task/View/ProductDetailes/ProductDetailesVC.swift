@@ -8,10 +8,9 @@
 import UIKit
 
 protocol ProductDetailesVCProtocol: AnyObject {
-    func showAlert()
 }
 
-class ProductDetailesVC: UIViewController {
+class ProductDetailesVC: UIViewController, ProductDetailesVCProtocol {
 
     //MARK: - Outlets.
     @IBOutlet weak var productDetailesView: ProductDetailesView!
@@ -23,7 +22,6 @@ class ProductDetailesVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        productDetailesView.setup()
         setupProductInfo()
     }
     
@@ -36,15 +34,6 @@ class ProductDetailesVC: UIViewController {
     }
 }
 
-//MARK: - ProductDetailesVCProtocol.
-extension ProductDetailesVC: ProductDetailesVCProtocol {
-    func showAlert() {
-        self.showSuccessAlert(title: AlertTitle.success, message: AlertMessage.yourItemAdded) { _ in
-            self.navigationController?.popViewController(animated: true)
-        }
-    }
-}
-
 //MARK: - Private Methods.
 extension ProductDetailesVC {
     private func setupProductInfo() {
@@ -53,5 +42,6 @@ extension ProductDetailesVC {
     }
     private func setupUI(){
         self.setViewControllerTitle(to: ViewControllerTitle.detailes, fontColor: .black)
+        productDetailesView.setup()
     }
 }
