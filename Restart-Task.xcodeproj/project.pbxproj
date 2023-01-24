@@ -46,7 +46,6 @@
 				87FB16F9ED493F4FCECD98F0 /* Pods-Restart-Task.debug.xcconfig */,
 				B7FC78B08C2BCC7098D20E2B /* Pods-Restart-Task.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -55,6 +54,27 @@
 			children = (
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E2495B74297FFF9F00CB68AB /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		E2495B75297FFFA700CB68AB /* AddProduct */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AddProduct;
+			sourceTree = "<group>";
+		};
+		E2495B76297FFFB000CB68AB /* ProductDetailes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ProductDetailes;
 			sourceTree = "<group>";
 		};
 		E25BBD48297FF35E00B80D22 = {
@@ -143,6 +163,9 @@
 		E25BBD71297FF4F100B80D22 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E2495B74297FFF9F00CB68AB /* Main */,
+				E2495B76297FFFB000CB68AB /* ProductDetailes */,
+				E2495B75297FFFA700CB68AB /* AddProduct */,
 			);
 			path = View;
 			sourceTree = "<group>";
