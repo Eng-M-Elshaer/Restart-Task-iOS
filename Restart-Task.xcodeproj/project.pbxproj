@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		68144F2B1A7A9E0617E5D41F /* Pods_Restart_Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75E7FA1F314C25DADD750877 /* Pods_Restart_Task.framework */; };
+		E2495B7A2980001D00CB68AB /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2495B792980001D00CB68AB /* APIRouter.swift */; };
+		E2495B7C2980002C00CB68AB /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2495B7B2980002C00CB68AB /* APIManager.swift */; };
 		E25BBD55297FF35E00B80D22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25BBD54297FF35E00B80D22 /* AppDelegate.swift */; };
 		E25BBD5C297FF35E00B80D22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E25BBD5A297FF35E00B80D22 /* Main.storyboard */; };
 		E25BBD5F297FF35E00B80D22 /* Restart_Task.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E25BBD5D297FF35E00B80D22 /* Restart_Task.xcdatamodeld */; };
@@ -19,6 +21,8 @@
 		75E7FA1F314C25DADD750877 /* Pods_Restart_Task.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Restart_Task.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87FB16F9ED493F4FCECD98F0 /* Pods-Restart-Task.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Restart-Task.debug.xcconfig"; path = "Target Support Files/Pods-Restart-Task/Pods-Restart-Task.debug.xcconfig"; sourceTree = "<group>"; };
 		B7FC78B08C2BCC7098D20E2B /* Pods-Restart-Task.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Restart-Task.release.xcconfig"; path = "Target Support Files/Pods-Restart-Task/Pods-Restart-Task.release.xcconfig"; sourceTree = "<group>"; };
+		E2495B792980001D00CB68AB /* APIRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
+		E2495B7B2980002C00CB68AB /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		E25BBD51297FF35E00B80D22 /* Restart-Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Restart-Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E25BBD54297FF35E00B80D22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E25BBD5B297FF35E00B80D22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -75,6 +79,21 @@
 			children = (
 			);
 			path = ProductDetailes;
+			sourceTree = "<group>";
+		};
+		E2495B77297FFFFB00CB68AB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E2495B782980000400CB68AB /* ProductCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		E2495B782980000400CB68AB /* ProductCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ProductCell;
 			sourceTree = "<group>";
 		};
 		E25BBD48297FF35E00B80D22 = {
@@ -142,6 +161,8 @@
 		E25BBD6E297FF4C900B80D22 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				E2495B792980001D00CB68AB /* APIRouter.swift */,
+				E2495B7B2980002C00CB68AB /* APIManager.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -163,6 +184,7 @@
 		E25BBD71297FF4F100B80D22 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E2495B77297FFFFB00CB68AB /* Cells */,
 				E2495B74297FFF9F00CB68AB /* Main */,
 				E2495B76297FFFB000CB68AB /* ProductDetailes */,
 				E2495B75297FFFA700CB68AB /* AddProduct */,
@@ -307,7 +329,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2495B7C2980002C00CB68AB /* APIManager.swift in Sources */,
 				E25BBD5F297FF35E00B80D22 /* Restart_Task.xcdatamodeld in Sources */,
+				E2495B7A2980001D00CB68AB /* APIRouter.swift in Sources */,
 				E25BBD55297FF35E00B80D22 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
