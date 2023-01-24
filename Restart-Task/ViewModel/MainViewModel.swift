@@ -8,7 +8,6 @@
 import Foundation
 
 protocol MainViewModelProtocol {
-    func getProducts() -> [SaveProductModel]
     func getTotalCostOfProducts() -> String
     func clearTheData()
     func getProductsCount() -> Int
@@ -38,9 +37,6 @@ extension MainViewModel: MainViewModelProtocol {
             return savedProducts[index]
         }
         return SaveProductModel()
-    }
-    internal func getProducts() -> [SaveProductModel] {
-        return self.savedProducts
     }
     internal func getTotalCostOfProducts() -> String{
         return "\(getTotalCost())"
