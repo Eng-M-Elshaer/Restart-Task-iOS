@@ -165,8 +165,79 @@
             </objects>
             <point key="canvasLocation" x="2911.594202898551" y="697.76785714285711"/>
         </scene>
+        <!--Product DetailesVC-->
+        <scene sceneID="N8E-dU-c9F">
+            <objects>
+                <viewController storyboardIdentifier="ProductDetailesVC" id="ls1-QY-7G7" customClass="ProductDetailesVC" customModule="RestartTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j1b-8J-Qot" customClass="ProductDetailesView" customModule="RestartTask" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RFo-dR-obn">
+                                <rect key="frame" x="39" y="158.66666666666666" width="312" height="282.66666666666674"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tiE-DO-h0C">
+                                <rect key="frame" x="39" y="461.33333333333331" width="312" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQB-pU-pki">
+                                <rect key="frame" x="39" y="502.33333333333326" width="312" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nXb-kH-my0">
+                                <rect key="frame" x="39" y="543.33333333333337" width="312" height="186.33333333333337"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="liu-k0-heX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RFo-dR-obn" firstAttribute="width" secondItem="j1b-8J-Qot" secondAttribute="width" multiplier="0.8" id="1n4-2d-kj7"/>
+                            <constraint firstItem="nXb-kH-my0" firstAttribute="leading" secondItem="ZQB-pU-pki" secondAttribute="leading" id="2ca-p4-ai7"/>
+                            <constraint firstItem="nXb-kH-my0" firstAttribute="trailing" secondItem="ZQB-pU-pki" secondAttribute="trailing" id="4SK-Pc-aLN"/>
+                            <constraint firstItem="tiE-DO-h0C" firstAttribute="centerX" secondItem="RFo-dR-obn" secondAttribute="centerX" id="5r5-wo-2f9"/>
+                            <constraint firstItem="tiE-DO-h0C" firstAttribute="leading" secondItem="RFo-dR-obn" secondAttribute="leading" id="91N-cQ-Tio"/>
+                            <constraint firstItem="ZQB-pU-pki" firstAttribute="top" secondItem="tiE-DO-h0C" secondAttribute="bottom" constant="20" id="COZ-bg-ibh"/>
+                            <constraint firstItem="ZQB-pU-pki" firstAttribute="centerX" secondItem="tiE-DO-h0C" secondAttribute="centerX" id="GqV-d4-DnF"/>
+                            <constraint firstItem="RFo-dR-obn" firstAttribute="centerY" secondItem="liu-k0-heX" secondAttribute="centerY" multiplier="0.7" id="Mec-Pr-hUw"/>
+                            <constraint firstItem="nXb-kH-my0" firstAttribute="height" secondItem="j1b-8J-Qot" secondAttribute="height" multiplier="0.220982" id="QRH-tM-XUN"/>
+                            <constraint firstItem="nXb-kH-my0" firstAttribute="centerX" secondItem="liu-k0-heX" secondAttribute="centerX" id="QfF-Jg-DHd"/>
+                            <constraint firstItem="RFo-dR-obn" firstAttribute="height" secondItem="j1b-8J-Qot" secondAttribute="height" multiplier="0.334821" id="WaI-mR-xcX"/>
+                            <constraint firstItem="nXb-kH-my0" firstAttribute="top" secondItem="ZQB-pU-pki" secondAttribute="bottom" constant="20" id="jSf-0g-NT1"/>
+                            <constraint firstItem="RFo-dR-obn" firstAttribute="centerX" secondItem="liu-k0-heX" secondAttribute="centerX" id="kq1-w3-VLe"/>
+                            <constraint firstItem="tiE-DO-h0C" firstAttribute="top" secondItem="RFo-dR-obn" secondAttribute="bottom" constant="20" id="lzS-BB-zhY"/>
+                            <constraint firstItem="ZQB-pU-pki" firstAttribute="trailing" secondItem="tiE-DO-h0C" secondAttribute="trailing" id="oq4-fy-DoX"/>
+                            <constraint firstItem="tiE-DO-h0C" firstAttribute="trailing" secondItem="RFo-dR-obn" secondAttribute="trailing" id="vc6-mD-UFv"/>
+                            <constraint firstItem="ZQB-pU-pki" firstAttribute="leading" secondItem="tiE-DO-h0C" secondAttribute="leading" id="xln-Pu-5Bf"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="productDespLabel" destination="nXb-kH-my0" id="hLi-iW-cKR"/>
+                            <outlet property="productImageView" destination="RFo-dR-obn" id="cz7-el-Amf"/>
+                            <outlet property="productNameLabel" destination="tiE-DO-h0C" id="CqK-TK-F5I"/>
+                            <outlet property="productPriceLabel" destination="ZQB-pU-pki" id="maU-SK-FgY"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="productDetailesView" destination="j1b-8J-Qot" id="yMb-2Y-OqD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3gR-cB-l0Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3680" y="3"/>
+        </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
